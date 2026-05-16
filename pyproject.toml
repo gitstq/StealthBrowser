@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "stealth-browser"
+version = "1.0.0"
+description = "轻量级反检测浏览器指纹分析CLI工具"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "StealthBrowser Team"},
+]
+keywords = ["browser", "fingerprint", "anti-detection", "privacy", "stealth"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Environment :: Console",
+]
+
+[project.scripts]
+stealth-browser = "stealth_browser.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
